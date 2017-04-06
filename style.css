@@ -1,0 +1,44 @@
+footer {
+    background-color: black;
+    opacity: 0.8;
+}
+#newsletter {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+input {
+    margin-left: 10px;
+}
+.btn-circle {
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 25px;
+  float: right;
+  margin-top: 10px;
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+  transition: transform .8s ease-in-out;
+}
+.btn-circle:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+p {
+    color: white;
+}
+h2 {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+h3 {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+li {
+    list-style: none;
+    color: white;
+}
