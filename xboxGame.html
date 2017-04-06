@@ -1,0 +1,7 @@
+
+  <div ng-repeat="article in articles | filter: article.consol='Xbox One'" class="col-lg-4">
+    <img class="imageJson" src="{{article.image}}" alt="{{article.image}}">
+    <h2>{{ article.jeux }}</h2>
+    <p>{{article.consol}}</p>
+    <p>{{article.prix +' '+ '<span class="glyphicon glyphicon-shopping-cart"></span>'}}</p>
+  </div>
