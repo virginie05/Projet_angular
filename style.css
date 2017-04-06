@@ -1,0 +1,7 @@
+.modal-header {
+    background-color: #222222;
+    color: #dddddd;
+}
+.modal-header .close {
+    color: #ffffff;
+}
