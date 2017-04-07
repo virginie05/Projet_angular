@@ -75,7 +75,7 @@ footer {
     font-size: 30px;
     font-weight: bold;
 }
-input {
+footer>input {
     margin-left: 10px;
 }
 .btn-circle {
@@ -93,7 +93,7 @@ input {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
 }
-p {
+footer>p {
     color: white;
 }
 h2 {
@@ -132,4 +132,12 @@ li {
 }
 #panier{
   margin-left: 130px;
+}
+/*Noemi*/
+.modal-header {
+    background-color: #222222;
+    color: #dddddd;
+}
+.modal-header .close {
+    color: #ffffff;
 }

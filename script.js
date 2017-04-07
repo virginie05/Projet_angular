@@ -4,6 +4,7 @@ var app = angular.module("myRoute", ["ngRoute"])
   .then(function (takes) {
     $rootScope.articles = takes.data;
   });
+  $rootScope.newArticles = [];
 });
 app.config(["$routeProvider", function ($routeProvider) {
   $routeProvider
@@ -54,10 +55,39 @@ app.controller("accueil", ["$scope", function($scope){
   };
 }]);
 app.controller("xboxGame", ["$scope", function($scope) {
+        $scope.buy = function() {
+            $scope.newArticles.push({console:this.article.consol, game:this.article.jeux, price:this.article.prix
+            });
+        };
+        /*$scope.console = function() { 
+            return $scope.newArticles.console; 
+        };
+        $scope.game = function() {
+            return $scope.newArticles.game;
+        };
+        $scope.price = function() {
+            return $scope.newArticles.price;
+        };*/
 }]);
 app.controller("pcGames", ["$scope", function($scope) {
+        $scope.buy = function() {
+            $scope.newArticles.push({console:this.article.consol, game:this.article.jeux, price:this.article.prix
+            });
+        };
+        $scope.remove = function (item) {
+           $scope.newArticles.splice(item, 1);
+       };
 }]);
 app.controller("playstationGames", ["$scope", function($scope) {
+        $scope.buy = function() {
+            $scope.newArticles.push({console:this.article.consol, game:this.article.jeux, price:this.article.prix
+            });
+        };
+        
 }]);
 app.controller("nintendoGames", ["$scope", function($scope) {
+        $scope.buy = function() {
+            $scope.newArticles.push({console:this.article.consol, game:this.article.jeux, price:this.article.prix
+            });
+        };
 }]);
