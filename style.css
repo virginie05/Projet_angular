@@ -1,5 +1,5 @@
 body{
-    font-family: 'Slabo 28px', serif;
+    font-family: 'Slabo 27px', serif;
 }
 /*carrousel*/
 .carousel-inner > .item > img,
@@ -58,8 +58,10 @@ a{
         background-size: cover;
     }
 }
-img{
+ img{
     border-bottom: 130px solid rgba(0, 0, 0, 0.90);
+
+
 
 
 }
@@ -104,6 +106,9 @@ h3 {
     font-size: 15px;
     font-weight: bold;
 }
+h6{
+  color: white;
+}
 li {
     list-style: none;
     color: white;
@@ -111,4 +116,20 @@ li {
 .imageJson {
   height:400px;
   width: 220px;
+  margin-top: 120px;
+}
+.jeux{
+  margin-top: -117px;
+  margin-left: 40px;
+  z-index: 1;
+}
+.consol {
+  margin: 25px;
+  margin-left: 10px;
+}
+.prix{
+ margin-left: 10px;
+}
+#panier{
+  margin-left: 130px;
 }
