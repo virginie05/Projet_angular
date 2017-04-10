@@ -12,6 +12,14 @@ var app = angular.module("myRoute", ["ngRoute"])
   $rootScope.remove = function(item) {
     $rootScope.newArticles.splice(item, 1);
   };
+  $rootScope.total = function () {
+    var total = 0;
+    for (var i = 0; i < $rootScope.newArticles.length; i++) {
+      total += ($rootScope.newArticles[i].quantity * $rootScope.newArticles[i].price);
+    }
+    ;
+    return total;
+  };
 });
 app.config(["$routeProvider", function ($routeProvider) {
   $routeProvider

@@ -177,3 +177,6 @@ li {
 footer{
   margin-top: 200px;
 }
+input[name="quantity"] {
+   width: 100px;
+}

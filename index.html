@@ -209,9 +209,10 @@
       </div>
     </div>
   </div>
+  <!-- Modal Panier-->
   <div class="modal fade" id="basket" role="dialog">
     <div class="modal-dialog">
-      <!-- Modal Panier-->
+      <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -234,23 +235,26 @@
           </div>
           <div ng-repeat="newArticle in newArticles" class="row">
             <div class="col-lg-3 text-center">
-              <p id="panier">{{newArticle.game}}<p>
+              <span>{{newArticle.game}}</span>
               </div>
               <div class="col-lg-3 text-center">
-                <p id="panier">{{newArticle.console}}<p>
+                <span>{{newArticle.console}}</span>
                 </div>
                 <div class="col-lg-3 text-center">
-                  <button ng-click="newArticle.quantity = newArticle.quantity+1" type="button" name="buttonUp" id="buttonUp">+</button>
-                  <span>{{newArticle.quantity}}</span>
-                  <button ng-click="newArticle.quantity = newArticle.quantity-1" type="button" name="buttonDown" id="buttonDown">-</button>
+                  <input type="number" ng-model="newArticle.quantity" name="quantity" min="1"/>
                 </div>
                 <div class="col-lg-3 text-center">
-                  <span>{{newArticle.price * newArticle.quantity | number:2}}</span>
+                  <span>{{newArticle.price * newArticle.quantity | number:2 | currency:"€"}}</span>
                   <button type="button" class="btn btn-default btn-sm" name="trashButton" id="trash" ng-click="remove($index)">
                     <span class="glyphicon glyphicon-trash"></span>
                   </button>
                 </div>
               </div>
+              <div>
+                <div class="col-xs-offset-9 col-sm-offset-9 col-md-offset-9 col-lg-offset-9">
+                <span>Total : {{total() | number:2 | currency:"€"}}</span>
+              </div>
+                </div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
